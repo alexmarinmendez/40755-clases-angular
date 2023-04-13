@@ -8,7 +8,9 @@
 <!-- <div class="clase-ejemplo">
   {{ nombre?.toUpperCase() }}
 </div> -->
-<div [ngClass]="nombre ? 'clase-roja' : 'clase-azul'">
+<!-- <div [ngClass]="nombre ? 'clase-roja' : 'clase-azul'"> -->
+<div [style.font-size]="nombre ? '20px' : '10px'">
   {{ nombre ? "Tiene valor" : "No tiene valor" }}
 </div>
 <button (click)="nombre = 'Texto asignado dinamicamente'">Asignar Texto</button>
+<button (click)="nombre = ''">Remover Texto</button>
