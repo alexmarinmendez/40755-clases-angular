@@ -32,7 +32,7 @@
 <button (click)="valorSwitch = 'valor3'">Asignar VALOR 3</button> -->
 
 <!-- <button (click)="decirHola()">Click me!</button> -->
-
+<!-- 
 <p>
   <label for="nombre">Nombre:</label>
   <input id="nombre" [(ngModel)]="nombre" />
@@ -43,4 +43,14 @@
   <input id="apellido" [(ngModel)]="apellido" />
 </p>
 <button (click)="verDatos()">Mostrar</button>
-<button (click)="cargarDatos()">Cargar</button>
+<button (click)="cargarDatos()">Cargar</button> -->
+
+<div>SIN PIPE => Hoy es: {{ hoy }}</div>
+<div>PIPE SIN OPCIONES => Hoy es: {{ hoy | date }}</div>
+<div>PIPE CON LA OPCION short => Hoy es: {{ hoy | date : "short" }}</div>
+<div>PIPE CON LA OPCION 'h:mm' => Hoy es: {{ hoy | date : "h:mm" }}</div>
+
+<hr />
+<div>
+  {{ 25.5 | currency }}
+</div>
