@@ -7,6 +7,7 @@ import { ComponenteDosComponent } from './clase02/componente-dos/componente-dos.
 import { InterpolacionComponent } from './clase04/interpolacion/interpolacion.component';
 import { MiDirectivaDirective } from './clase04/mi-directiva.directive';
 import { FormsModule } from '@angular/forms';
+import { MiPipePipe } from './clase04/mi-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { FormsModule } from '@angular/forms';
     ComponenteDosComponent,
     InterpolacionComponent,
     MiDirectivaDirective,
+    MiPipePipe,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
