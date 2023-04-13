@@ -1,0 +1,14 @@
+<!-- <p>interpolacion works!</p>
+{{ nombre?.toUpperCase() + " HTML" }}
+<br />
+{{ nombre ? "Tiene valor" : "No tiene valor" }}
+<br /> -->
+<!-- {{ new Date() }} -->
+<p>Componente de Interpolación</p>
+<!-- <div class="clase-ejemplo">
+  {{ nombre?.toUpperCase() }}
+</div> -->
+<div [ngClass]="nombre ? 'clase-roja' : 'clase-azul'">
+  {{ nombre ? "Tiene valor" : "No tiene valor" }}
+</div>
+<button (click)="nombre = 'Texto asignado dinamicamente'">Asignar Texto</button>
