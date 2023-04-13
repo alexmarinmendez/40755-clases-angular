@@ -11,6 +11,7 @@ export class InterpolacionComponent implements OnInit {
   // public nombre: string = 'Clase 4 de Interpolación';
   public personas = ['José', 'Juan', 'Julio'];
   public bandera = true;
+  public valorSwitch: string | undefined;
 
   ngOnInit(): void {
     // this.nombre = 'Clase 4 de Interpolación';
