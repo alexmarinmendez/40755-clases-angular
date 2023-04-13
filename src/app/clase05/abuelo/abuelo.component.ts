@@ -12,4 +12,10 @@ export class AbueloComponent {
     { nombre: 'José', calificacion: 80 },
     { nombre: 'Julian', calificacion: 50 },
   ];
+
+  public seleccionado: Alumno;
+
+  alumnoSeleccionado(alumno: Alumno): void {
+    this.seleccionado = alumno;
+  }
 }

@@ -1,7 +1,7 @@
 <!-- <p>hijo-uno works!</p>
 <app-nieto-uno></app-nieto-uno> -->
 
-<div>
+<div (click)="selec()">
   <strong>Alumno: {{ alumno.nombre }}</strong>
   <span>Calificación:</span>
   <span [ngClass]="alumno.calificacion < 70 ? 'red' : 'blue'">{{

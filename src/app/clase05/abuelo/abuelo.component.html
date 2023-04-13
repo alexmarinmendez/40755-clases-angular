@@ -1,9 +1,12 @@
 <div class="d-flex flex-column m-4">
-  <span class="text-danger">Componente Abuelo</span>
-  <!-- <button type="button" class="btn btn-primary">Primary</button> -->
+  <p class="text-danger">Alumno seleccionado:</p>
+  <p *ngIf="seleccionado">{{ seleccionado.nombre }}</p>
   <div *ngFor="let alumno of alumnos">
-    <app-hijo-uno [alumno]="alumno"></app-hijo-uno>
+    <app-hijo-uno
+      [alumno]="alumno"
+      (seleccionado)="alumnoSeleccionado($event)"
+    ></app-hijo-uno>
   </div>
   <!-- <app-hijo-dos [estado]="true"></app-hijo-dos> -->
-  <app-hijo-dos></app-hijo-dos>
+  <!-- <app-hijo-dos></app-hijo-dos> -->
 </div>
