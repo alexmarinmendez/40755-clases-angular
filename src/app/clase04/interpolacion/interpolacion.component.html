@@ -15,6 +15,9 @@
 <button (click)="nombre = 'Texto asignado dinamicamente'">Asignar Texto</button>
 <button (click)="nombre = ''">Remover Texto</button> -->
 <!-- <div appMiDirectiva>Ejemplo de directiva</div> -->
-<ul>
+<!-- <ul>
   <li *ngFor="let persona of personas">Nombre: {{ persona }}</li>
-</ul>
+</ul> -->
+<div *ngIf="bandera">La bandera está activada</div>
+<button (click)="bandera = true">Prender bandera</button>
+<button (click)="bandera = false">Apagar bandera</button>
