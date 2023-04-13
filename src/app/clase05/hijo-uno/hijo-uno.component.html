@@ -1,2 +1,10 @@
-<p>hijo-uno works!</p>
-<app-nieto-uno></app-nieto-uno>
+<!-- <p>hijo-uno works!</p>
+<app-nieto-uno></app-nieto-uno> -->
+
+<div>
+  <strong>Alumno: {{ alumno.nombre }}</strong>
+  <span>Calificación:</span>
+  <span [ngClass]="alumno.calificacion < 70 ? 'red' : 'blue'">{{
+    alumno.calificacion
+  }}</span>
+</div>
