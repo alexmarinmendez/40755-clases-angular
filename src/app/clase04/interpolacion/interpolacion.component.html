@@ -14,4 +14,7 @@
 </div>
 <button (click)="nombre = 'Texto asignado dinamicamente'">Asignar Texto</button>
 <button (click)="nombre = ''">Remover Texto</button> -->
-<div appMiDirectiva>Ejemplo de directiva</div>
+<!-- <div appMiDirectiva>Ejemplo de directiva</div> -->
+<ul>
+  <li *ngFor="let persona of personas">Nombre: {{ persona }}</li>
+</ul>

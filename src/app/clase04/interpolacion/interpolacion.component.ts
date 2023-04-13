@@ -9,6 +9,7 @@ export class InterpolacionComponent implements OnInit {
   // export class InterpolacionComponent {
   public nombre: string | undefined;
   // public nombre: string = 'Clase 4 de Interpolación';
+  public personas = ['José', 'Juan', 'Julio'];
 
   ngOnInit(): void {
     // this.nombre = 'Clase 4 de Interpolación';
