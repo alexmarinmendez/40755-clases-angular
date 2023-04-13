@@ -8,6 +8,10 @@ import { InterpolacionComponent } from './clase04/interpolacion/interpolacion.co
 import { MiDirectivaDirective } from './clase04/mi-directiva.directive';
 import { FormsModule } from '@angular/forms';
 import { MiPipePipe } from './clase04/mi-pipe.pipe';
+import { AbueloComponent } from './clase05/abuelo/abuelo.component';
+import { HijoUnoComponent } from './clase05/hijo-uno/hijo-uno.component';
+import { HijoDosComponent } from './clase05/hijo-dos/hijo-dos.component';
+import { NietoUnoComponent } from './clase05/nieto-uno/nieto-uno.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +21,10 @@ import { MiPipePipe } from './clase04/mi-pipe.pipe';
     InterpolacionComponent,
     MiDirectivaDirective,
     MiPipePipe,
+    AbueloComponent,
+    HijoUnoComponent,
+    HijoDosComponent,
+    NietoUnoComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
