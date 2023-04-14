@@ -6,6 +6,15 @@ import {
   Validators,
 } from '@angular/forms';
 
+class Hero {
+  name: string;
+  alterEgo: string;
+  constructor(name: string, alterEgo: string) {
+    this.name = name;
+    this.alterEgo = alterEgo;
+  }
+}
+
 @Component({
   selector: 'app-formularios',
   templateUrl: './formularios.component.html',
@@ -14,6 +23,8 @@ import {
 export class FormulariosComponent implements OnInit {
   public formularioPrincipal: FormGroup;
   public formularioSecundario: FormGroup;
+
+  public heroe = new Hero('Batman', 'Bruce Wayne');
 
   constructor(private fb: FormBuilder) {}
 
@@ -33,5 +44,9 @@ export class FormulariosComponent implements OnInit {
   submit(): void {
     console.log(this.formularioPrincipal.value);
     console.log(this.formularioPrincipal.valid);
+  }
+
+  submit2(): void {
+    console.log(this.heroe);
   }
 }
