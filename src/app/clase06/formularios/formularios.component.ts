@@ -26,6 +26,8 @@ export class FormulariosComponent implements OnInit {
 
   public heroe = new Hero('', '');
 
+  public campoEjemplo: FormControl;
+
   constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
@@ -38,6 +40,12 @@ export class FormulariosComponent implements OnInit {
       nombre: new FormControl(),
       edad: new FormControl(),
       genero: new FormControl(),
+    });
+    this.campoEjemplo = new FormControl(['Inicial']);
+
+    this.campoEjemplo.valueChanges.subscribe((value) => {
+      // console.log(value);
+      this.formularioPrincipal.get('nombre')?.setValue(value);
     });
   }
 

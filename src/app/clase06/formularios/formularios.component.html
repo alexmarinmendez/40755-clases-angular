@@ -1,4 +1,4 @@
-<!-- <div class="container">
+<div class="container">
   <form [formGroup]="formularioPrincipal" (submit)="submit()">
     Nombre:
     <input
@@ -32,8 +32,8 @@
   {{ formularioPrincipal.valid ? "Válido" : "No válido" }}
   <br />
   {{ formularioPrincipal.get("nombre")?.valid | json }}
-</div> -->
-<hr />
+</div>
+<!-- <hr />
 <h3>Formulario de Heroe</h3>
 <form #heroForm="ngForm" (submit)="submit2()">
   <div>
@@ -56,4 +56,6 @@
     />
   </div>
   <button type="submit" [disabled]="!heroForm.form.valid">Submit</button>
-</form>
+</form> -->
+<hr />
+Ejemplo <input type="text" [formControl]="campoEjemplo" />
