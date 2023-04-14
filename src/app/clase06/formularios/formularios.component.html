@@ -1,12 +1,35 @@
-<div class="mt-4">
+<div class="container">
   <form [formGroup]="formularioPrincipal" (submit)="submit()">
-    Nombre: <input type="text" formControlName="nombre" /> Edad:
-    <input type="text" formControlName="edad" /> Género:
+    Nombre:
+    <input
+      type="text"
+      formControlName="nombre"
+      [ngClass]="
+        formularioPrincipal.get('nombre')?.invalid &&
+        formularioPrincipal.get('nombre')?.dirty
+          ? 'error'
+          : ''
+      "
+    />
+    <br />
+    <span
+      *ngIf="
+        formularioPrincipal.get('nombre')?.invalid &&
+        formularioPrincipal.get('nombre')?.dirty
+      "
+      >El nombre es incorrecto</span
+    >
+    <br />
+    <br />Edad: <input type="text" formControlName="edad" /> <br />Género:
     <input type="text" formControlName="genero" />
-    <button type="submit">Registrarse</button>
+    <br /><button type="submit">Registrarse</button>
   </form>
   <br />
   {{ formularioPrincipal.value | json }}
   <br />
   {{ formularioPrincipal.get("nombre")?.value | json }}
+  <br />
+  {{ formularioPrincipal.valid ? "Válido" : "No válido" }}
+  <br />
+  {{ formularioPrincipal.get("nombre")?.valid | json }}
 </div>
