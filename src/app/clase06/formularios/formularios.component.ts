@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-formularios',
@@ -14,7 +19,7 @@ export class FormulariosComponent implements OnInit {
 
   ngOnInit(): void {
     this.formularioPrincipal = this.fb.group({
-      nombre: [],
+      nombre: ['', [Validators.required, Validators.minLength(3)]],
       edad: [],
       genero: [],
     });
@@ -27,5 +32,6 @@ export class FormulariosComponent implements OnInit {
 
   submit(): void {
     console.log(this.formularioPrincipal.value);
+    console.log(this.formularioPrincipal.valid);
   }
 }

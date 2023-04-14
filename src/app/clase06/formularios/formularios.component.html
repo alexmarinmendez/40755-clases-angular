@@ -5,4 +5,8 @@
     <input type="text" formControlName="genero" />
     <button type="submit">Registrarse</button>
   </form>
+  <br />
+  {{ formularioPrincipal.value | json }}
+  <br />
+  {{ formularioPrincipal.get("nombre")?.value | json }}
 </div>
