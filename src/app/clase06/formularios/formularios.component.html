@@ -1,0 +1,8 @@
+<div class="mt-4">
+  <form [formGroup]="formularioPrincipal" (submit)="submit()">
+    Nombre: <input type="text" formControlName="nombre" /> Edad:
+    <input type="text" formControlName="edad" /> Género:
+    <input type="text" formControlName="genero" />
+    <button type="submit">Registrarse</button>
+  </form>
+</div>
