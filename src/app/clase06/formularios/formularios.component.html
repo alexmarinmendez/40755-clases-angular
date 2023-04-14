@@ -38,7 +38,13 @@
 <form #heroForm="ngForm" (submit)="submit2()">
   <div>
     <label for="name">Nombre:</label>
-    <input type="text" name="name" id="name" [(ngModel)]="heroe.name" />
+    <input
+      type="text"
+      name="name"
+      id="name"
+      [(ngModel)]="heroe.name"
+      required
+    />
   </div>
   <div>
     <label for="name">Alter ego:</label>
@@ -49,5 +55,5 @@
       [(ngModel)]="heroe.alterEgo"
     />
   </div>
-  <button type="submit">Submit</button>
+  <button type="submit" [disabled]="!heroForm.form.valid">Submit</button>
 </form>

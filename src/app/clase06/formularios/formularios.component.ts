@@ -24,7 +24,7 @@ export class FormulariosComponent implements OnInit {
   public formularioPrincipal: FormGroup;
   public formularioSecundario: FormGroup;
 
-  public heroe = new Hero('Batman', 'Bruce Wayne');
+  public heroe = new Hero('', '');
 
   constructor(private fb: FormBuilder) {}
 
