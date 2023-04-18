@@ -15,7 +15,11 @@
     {{ alumno.calificacion }}
   </p>
   <p>CON PIPE CUSTOMIZADO: {{ alumno | alumnoPipe }}</p> -->
-  <div *ngFor="let alumno of alumnos">
-    {{ alumno | alumnoPipe : "otracosa" }}
+  <div
+    *ngFor="let alumno of alumnos; let i = index"
+    (mouseenter)="hover = i"
+    (mouseleave)="hover = -1"
+  >
+    {{ alumno | alumnoPipe : (hover === i ? "long" : null) }}
   </div>
 </div>

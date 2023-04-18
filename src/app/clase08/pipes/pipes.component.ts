@@ -11,6 +11,7 @@ export class PipesComponent {
   public miPropiedad = 'Curso Angular';
   // public alumno: Alumno;
   public alumnos: Alumno[];
+  public hover: number;
 
   constructor() {
     // this.alumno = {

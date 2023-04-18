@@ -5,7 +5,7 @@ import { Alumno } from 'src/app/clase05/alumno';
   name: 'alumnoPipe',
 })
 export class AlumnoPipe implements PipeTransform {
-  transform(value: Alumno, ...args: string[]): string {
+  transform(value: Alumno, ...args: unknown[]): string {
     return args[0] === 'long'
       ? value.nombre + ' obtuvo la califación de ' + value.calificacion
       : value.nombre + ' - ' + value.calificacion;
