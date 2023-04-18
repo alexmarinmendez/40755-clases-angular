@@ -20,6 +20,8 @@ import { ModalComponent } from './clase07/modal/modal.component';
 import { PipesComponent } from './clase08/pipes/pipes.component';
 import { MiCustomPipe } from './clase08/pipes/mi-custom.pipe';
 import { AlumnoPipe } from './clase08/pipes/alumno.pipe';
+import { MiPropiaDirective } from './clase08/directivas/mi-propia.directive';
+import { RepetirDirective } from './clase08/directivas/repetir.directive';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { AlumnoPipe } from './clase08/pipes/alumno.pipe';
     PipesComponent,
     MiCustomPipe,
     AlumnoPipe,
+    MiPropiaDirective,
+    RepetirDirective,
   ],
   imports: [
     BrowserModule,

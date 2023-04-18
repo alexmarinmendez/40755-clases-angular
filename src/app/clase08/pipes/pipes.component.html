@@ -15,11 +15,23 @@
     {{ alumno.calificacion }}
   </p>
   <p>CON PIPE CUSTOMIZADO: {{ alumno | alumnoPipe }}</p> -->
-  <div
+  <!-- <div
     *ngFor="let alumno of alumnos; let i = index"
     (mouseenter)="hover = i"
     (mouseleave)="hover = -1"
   >
     {{ alumno | alumnoPipe : (hover === i ? "long" : null) }}
+  </div>-->
+  <!-- <div
+    *ngFor="let alumno of alumnos; let i = index"
+    (mouseenter)="hover = i"
+    (mouseleave)="hover = -1"
+  >
+    <div appMiPropiaDirectiva [alumno]="alumno" weight="300" color="green">
+      {{ alumno | alumnoPipe : (hover === i ? "long" : null) }}
+    </div>
+  </div> -->
+  <div>
+    <span *appRepetir="10"> Hola! </span>
   </div>
 </div>

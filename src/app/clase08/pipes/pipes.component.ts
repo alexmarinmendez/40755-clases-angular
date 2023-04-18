@@ -20,7 +20,7 @@ export class PipesComponent {
     // };
     this.alumnos = [
       { nombre: 'Alex', calificacion: 80 },
-      { nombre: 'Sandra', calificacion: 90 },
+      { nombre: 'Sandra', calificacion: 60 },
       { nombre: 'Romina', calificacion: 75 },
     ];
   }
