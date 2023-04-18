@@ -13,6 +13,10 @@ import { HijoUnoComponent } from './clase05/hijo-uno/hijo-uno.component';
 import { HijoDosComponent } from './clase05/hijo-dos/hijo-dos.component';
 import { NietoUnoComponent } from './clase05/nieto-uno/nieto-uno.component';
 import { FormulariosComponent } from './clase06/formularios/formularios.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EjemplosMaterialComponent } from './clase07/ejemplos-material/ejemplos-material.component';
+import { MaterialModule } from './modulos/material/material.module';
+import { ModalComponent } from './clase07/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -27,8 +31,16 @@ import { FormulariosComponent } from './clase06/formularios/formularios.componen
     HijoDosComponent,
     NietoUnoComponent,
     FormulariosComponent,
+    EjemplosMaterialComponent,
+    ModalComponent,
   ],
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
