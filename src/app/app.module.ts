@@ -19,6 +19,7 @@ import { MaterialModule } from './modulos/material/material.module';
 import { ModalComponent } from './clase07/modal/modal.component';
 import { PipesComponent } from './clase08/pipes/pipes.component';
 import { MiCustomPipe } from './clase08/pipes/mi-custom.pipe';
+import { AlumnoPipe } from './clase08/pipes/alumno.pipe';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { MiCustomPipe } from './clase08/pipes/mi-custom.pipe';
     ModalComponent,
     PipesComponent,
     MiCustomPipe,
+    AlumnoPipe,
   ],
   imports: [
     BrowserModule,

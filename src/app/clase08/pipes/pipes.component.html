@@ -8,5 +8,14 @@
     <p>LONG {{ hoy | date : "long" }}</p>
     <p>SHORT {{ hoy | date : "short" }}</p> -->
   <!-- <p>=>{{ 3434 | miCustomPipe }}</p> -->
-  <p>{{ miPropiedad | miCustomPipe : "¿" : "upper" }}</p>
+  <!-- <p>{{ miPropiedad | miCustomPipe : "¿" : "upper" }}</p>
+  <p>PIPE json: {{ alumno | json }}</p>
+  <p>
+    FORMATEO SIN PIPE: {{ alumno.nombre }} obtuvo la califación de
+    {{ alumno.calificacion }}
+  </p>
+  <p>CON PIPE CUSTOMIZADO: {{ alumno | alumnoPipe }}</p> -->
+  <div *ngFor="let alumno of alumnos">
+    {{ alumno | alumnoPipe : "otracosa" }}
+  </div>
 </div>
