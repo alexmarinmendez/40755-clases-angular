@@ -17,6 +17,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EjemplosMaterialComponent } from './clase07/ejemplos-material/ejemplos-material.component';
 import { MaterialModule } from './modulos/material/material.module';
 import { ModalComponent } from './clase07/modal/modal.component';
+import { PipesComponent } from './clase08/pipes/pipes.component';
+import { MiCustomPipe } from './clase08/pipes/mi-custom.pipe';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { ModalComponent } from './clase07/modal/modal.component';
     FormulariosComponent,
     EjemplosMaterialComponent,
     ModalComponent,
+    PipesComponent,
+    MiCustomPipe,
   ],
   imports: [
     BrowserModule,
