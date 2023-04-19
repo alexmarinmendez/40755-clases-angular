@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { InjectionToken, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -22,6 +22,13 @@ import { MiCustomPipe } from './clase08/pipes/mi-custom.pipe';
 import { AlumnoPipe } from './clase08/pipes/alumno.pipe';
 import { MiPropiaDirective } from './clase08/directivas/mi-propia.directive';
 import { RepetirDirective } from './clase08/directivas/repetir.directive';
+import { ServiciosComponent } from './clase09/servicios/servicios.component';
+import { ListaAlumnosComponent } from './clase09/servicios/lista-alumnos/lista-alumnos.component';
+import { LoggerService } from './clase09/servicios/logger.service';
+import { LegacyLogger } from './clase09/servicios/logger.legacy';
+import { ExperimentalLoggerService } from './clase09/servicios/experimental-logger.service';
+
+export const APIURL = new InjectionToken('APIURL');
 
 @NgModule({
   declarations: [
@@ -43,6 +50,8 @@ import { RepetirDirective } from './clase08/directivas/repetir.directive';
     AlumnoPipe,
     MiPropiaDirective,
     RepetirDirective,
+    ServiciosComponent,
+    ListaAlumnosComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,7 +60,16 @@ import { RepetirDirective } from './clase08/directivas/repetir.directive';
     BrowserAnimationsModule,
     MaterialModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LoggerService,
+      useExisting: ExperimentalLoggerService,
+    },
+    {
+      provide: APIURL,
+      useValue: 'https://rickandmortyapi.com/api',
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
