@@ -27,6 +27,7 @@ import { ListaAlumnosComponent } from './clase09/servicios/lista-alumnos/lista-a
 import { LoggerService } from './clase09/servicios/logger.service';
 import { LegacyLogger } from './clase09/servicios/logger.legacy';
 import { ExperimentalLoggerService } from './clase09/servicios/experimental-logger.service';
+import { HttpClientModule } from '@angular/common/http';
 
 export const APIURL = new InjectionToken('APIURL');
 
@@ -59,6 +60,7 @@ export const APIURL = new InjectionToken('APIURL');
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MaterialModule,
+    HttpClientModule,
   ],
   providers: [
     {

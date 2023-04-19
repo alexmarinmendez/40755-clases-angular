@@ -7,10 +7,19 @@ import { MiServicioService } from './mi-servicio.service';
   styleUrls: ['./servicios.component.css'],
 })
 export class ServiciosComponent implements OnInit {
+  valores: any;
   constructor(private servicio: MiServicioService) {}
 
   ngOnInit(): void {
     console.log(this.servicio.obtenerAlumnos());
+    console.log(1);
+    this.servicio.obtenerPersonajes().subscribe((valores) => {
+      console.log(valores);
+      console.log(2);
+      this.valores = valores;
+    });
+    console.log(3);
+    console.log(this.valores.results);
   }
 
   click() {
