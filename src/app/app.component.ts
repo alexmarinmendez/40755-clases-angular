@@ -28,9 +28,8 @@ export class AppComponent implements OnInit {
     @Inject(APIURL) private api: string
   ) {}
   ngOnInit(): void {
-    this.logger.prefix = 'AppComponent';
-    this.logger.log('AppComponent init...');
-
-    console.log(this.api);
+    // this.logger.prefix = 'AppComponent';
+    // this.logger.log('AppComponent init...');
+    // console.log(this.api);
   }
 }

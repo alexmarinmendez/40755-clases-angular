@@ -28,6 +28,9 @@ import { LoggerService } from './clase09/servicios/logger.service';
 import { LegacyLogger } from './clase09/servicios/logger.legacy';
 import { ExperimentalLoggerService } from './clase09/servicios/experimental-logger.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ObservablesComponent } from './clase10/componentes/observables/observables.component';
+import { FechaComponent } from './clase10/componentes/fecha/fecha.component';
+import { ContadorComponent } from './clase10/componentes/contador/contador.component';
 
 export const APIURL = new InjectionToken('APIURL');
 
@@ -53,6 +56,9 @@ export const APIURL = new InjectionToken('APIURL');
     RepetirDirective,
     ServiciosComponent,
     ListaAlumnosComponent,
+    ObservablesComponent,
+    FechaComponent,
+    ContadorComponent,
   ],
   imports: [
     BrowserModule,
