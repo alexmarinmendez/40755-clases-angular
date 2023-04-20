@@ -3,6 +3,7 @@ import { LoggerService } from './clase09/servicios/logger.service';
 import { APIURL } from './app.module';
 import { APP_CONFIG, AppConfig } from './clase09/config.token';
 import { ExperimentalLoggerService } from './clase09/servicios/experimental-logger.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -25,11 +26,16 @@ export class AppComponent implements OnInit {
 
   constructor(
     private logger: LoggerService,
-    @Inject(APIURL) private api: string
+    @Inject(APIURL) private api: string,
+    private router: Router
   ) {}
   ngOnInit(): void {
     // this.logger.prefix = 'AppComponent';
     // this.logger.log('AppComponent init...');
     // console.log(this.api);
+  }
+
+  irAMiVista(): void {
+    this.router.navigate(['mi-vista', { nombre: 'Alex', calificacion: 40 }]);
   }
 }

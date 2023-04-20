@@ -30,6 +30,22 @@
 
 <div class="m-4">
   <h1>Clase 11</h1>
+  <button routerLink="/">Home</button>
+  <button routerLink="/mi-vista">Mi Vista</button>
+  <button routerLink="/uno">Uno</button>
+  <button routerLink="/dos">Dos</button>
+  <p>
+    <a routerLink="/">Home</a> | <a routerLink="/mi-vista">Mi Vista</a> |
+    <a routerLink="/uno">Uno</a> | <a routerLink="/dos">Dos</a>
+  </p>
+  <p>
+    <button (click)="irAMiVista()">Mi Vista</button>
+  </p>
+  <p>
+    <button routerLink="/mi-vista" [queryParams]="{ alumno: 'Juan' }">
+      Mi Vista con query params
+    </button>
+  </p>
   <hr />
   <router-outlet></router-outlet>
   <hr />

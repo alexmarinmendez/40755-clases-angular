@@ -9,6 +9,7 @@ const rutas: Routes = [
   { path: 'uno', component: EjemploContenidoUnoComponent },
   { path: 'dos', component: EjemploContenidoDosComponent },
   { path: 'mi-vista', component: MiVistaComponent },
+  { path: 'mi-vista/:parametro', component: MiVistaComponent },
 ];
 
 @NgModule({
