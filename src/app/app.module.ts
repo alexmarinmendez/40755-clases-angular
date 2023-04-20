@@ -31,6 +31,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { ObservablesComponent } from './clase10/componentes/observables/observables.component';
 import { FechaComponent } from './clase10/componentes/fecha/fecha.component';
 import { ContadorComponent } from './clase10/componentes/contador/contador.component';
+import { MiVistaComponent } from './clase11/mi-vista/mi-vista.component';
+import { EjemploContenidoUnoComponent } from './clase11/mi-vista/ejemplo-contenido-uno/ejemplo-contenido-uno.component';
+import { EjemploContenidoDosComponent } from './clase11/mi-vista/ejemplo-contenido-dos/ejemplo-contenido-dos.component';
+import { RouterModule, Routes } from '@angular/router';
+import { RoutingModule } from './clase11/routing/routing.module';
 
 export const APIURL = new InjectionToken('APIURL');
 
@@ -59,6 +64,9 @@ export const APIURL = new InjectionToken('APIURL');
     ObservablesComponent,
     FechaComponent,
     ContadorComponent,
+    MiVistaComponent,
+    EjemploContenidoUnoComponent,
+    EjemploContenidoDosComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,6 +75,7 @@ export const APIURL = new InjectionToken('APIURL');
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
+    RoutingModule,
   ],
   providers: [
     {
